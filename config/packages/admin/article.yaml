@@ -1,0 +1,22 @@
+easy_admin:
+    entities:
+        article:
+            class: App\Entity\Article
+            form:
+                fields:
+                    - {property: 'titrefr', label: 'Titre Francais'}
+                    - {property: 'titreen', label: 'Title English'}
+                    - {property: 'slugfr', label: 'Slug Francais'}
+                    - {property: 'slugen', label: 'Slug English'}
+                    - {property: 'textefr',label: 'Texte Francais', type: 'fos_ckeditor'}
+                    - {property: 'texteen',label: 'Text English', type: 'fos_ckeditor'}
+                    - { property: 'imageFile',label: 'Image', type: 'vich_image' }
+                    - {property: 'categories', label: 'Catégories'}
+                    - {property: 'dateCreation', type_options: { disabled: true }}
+            list:
+                fields:
+                    - {property: 'titrefr', label: 'Titre Francais'}
+                    - {property: 'titreen', label: 'Title English'}
+                    - {property: 'slugfr', label: 'Slug Francais'}
+                    - {property: 'slugen', label: 'Slug English'}
+                    - {property: 'dateCreation', label: 'Date de création'}

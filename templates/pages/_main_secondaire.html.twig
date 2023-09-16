@@ -1,0 +1,8 @@
+<div class="section">
+  <div class="container">
+    <div class="row">
+      {{ render(controller('App\\Controller\\ArticleController::indexAction',{'vue': '_listeSecondaire' ,'limit': 3})) }}
+      {{ render(controller('App\\Controller\\ArticleController::twitterRssAction', {'limit': 3})) }}
+    </div>
+  </div>
+</div>

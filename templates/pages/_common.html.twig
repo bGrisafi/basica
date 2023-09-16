@@ -1,0 +1,20 @@
+<div class="section section-breadcrumbs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1> {{attribute(page, 'titre' ~ app.request.locale)}} </h1>
+      </div>
+    </div>
+  </div>
+</div>
+{% if attribute(page, 'texte' ~ app.request.locale) is not empty %}
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          {{ attribute(page, 'texte' ~ app.request.locale) | raw}}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

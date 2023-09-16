@@ -1,0 +1,18 @@
+<!-- Our Articles -->
+
+      <!-- Featured News -->
+      <div class="col-sm-6 featured-news">
+        <h2>{{'article_liste.liste_secondaire.derniers' | trans}}</h2>
+        {% for article in articles %}
+          <div class="row">
+            <div class="col-xs-4"><a href="{{path('app_articles_show', {'_locale': app.request.locale ,'id': article.id, 'slug': attribute(article, 'slug' ~ app.request.locale)})}}"><img src="{{asset('img/blog/' ~article.imageName)}}" alt="{{attribute(article, 'titre' ~ app.request.locale)}}"></a></div>
+            <div class="col-xs-8">
+              <div class="caption"><a href="{{path('app_articles_show', {'_locale': app.request.locale ,'id': article.id, 'slug': attribute(article, 'slug' ~ app.request.locale)})}}">{{attribute(article, 'titre' ~ app.request.locale)}}</a></div>
+              <div class="date">{{article.dateCreation | date('d-m-y')}} </div>
+              <div class="intro">{{attribute(article, 'texte' ~ app.request.locale) | slice(0,60) | raw }} <a href="#">{{'article_liste.liste_secondaire.suite' | trans}}</a></div>
+            </div>
+          </div>
+        {% endfor %}
+
+      </div>
+      <!-- End Featured News -->

@@ -1,0 +1,18 @@
+easy_admin:
+    entities:
+        categorie:
+            class: App\Entity\Categorie
+            form:
+                fields:
+                    - {property: 'nomfr', label: 'Nom Francais'}
+                    - {property: 'nomen', label: 'Name English'}
+                    - {property: 'slugfr', label: 'Slug Francais'}
+                    - {property: 'slugen', label: 'Slug English'}
+                    - {property: 'articles', label: 'Articles', type_options: {by_reference: false}}
+            list:
+                fields:
+                    - {property: 'nomfr', label: 'Nom Francais'}
+                    - {property: 'nomen', label: 'Name English'}
+                    - {property: 'slugfr', label: 'Slug Francais'}
+                    - {property: 'slugen', label: 'Slug English'}
+                    - {property: 'articles', label: "Nombre d'articles liés"}

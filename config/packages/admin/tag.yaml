@@ -1,0 +1,18 @@
+easy_admin:
+    entities:
+        tag:
+            class: App\Entity\Tag
+            form:
+                fields:
+                    - {property: 'nomfr', label: 'Nom Francais'}
+                    - {property: 'nomen', label: 'Name English'}
+                    - {property: 'slugfr', label: 'Slug Francais'}
+                    - {property: 'slugen', label: 'Slug English'}
+                    - {property: 'works', label: 'Nombre de projets liés', type_options: {by_reference: false}}
+            list:
+                fields:
+                    - {property: 'nomfr', label: 'Nom Francais'}
+                    - {property: 'nomen', label: 'Name English'}
+                    - {property: 'slugfr', label: 'Slug Francais'}
+                    - {property: 'slugen', label: 'Slug English'}
+                    - {property: 'works', label: 'Nombre de projets liés'}

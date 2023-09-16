@@ -1,0 +1,12 @@
+<h2>{{'facebook_twitter' | trans}}</h2>
+<div class="col-sm-6 latest-news">
+<h4>Une erreur est survenue.</h4>
+{% if app.environment == 'dev' %}
+    <p>{{erreur}}</p>
+{% else %}
+    <p>Si l'erreur persiste, veuillez contacter l'administrateur du site.</p>
+{% endif %}
+
+</div>
+
+<!-- End Featured News -->

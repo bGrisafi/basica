@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block content1 %}
+
+<!-- Page Title -->
+<div class="section section-breadcrumbs">
+<div class="container">
+<div class="row">
+  <div class="col-md-12">
+    <h1>{{'work_detail.titre' | trans}}</h1>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="container">
+  <div class="row">
+    <!-- Product Image & Available Colors -->
+    <div class="col-sm-6">
+      <div class="product-image-large">
+        <img src="{{asset('img/portfolio/' ~work.imageName)}}" alt="{{work.imageName}}">
+      </div>
+      <div class="colors">
+      <span class="color-white"></span>
+      <span class="color-black"></span>
+      <span class="color-blue"></span>
+      <span class="color-orange"></span>
+      <span class="color-green"></span>
+    </div>
+    </div>
+    <!-- End Product Image & Available Colors -->
+    <!-- Product Summary & Options -->
+    <div class="col-sm-6 product-details">
+      <h2>{{attribute(work, 'titre' ~ app.request.locale)}}</h2>
+    <h3>{{'work_detail.vue_generale' | trans}}</h3>
+      <p>{{attribute(work, 'texte' ~ app.request.locale) | raw}}</p>
+    <h3>{{'work_detail.details' | trans}}</h3>
+    <p><strong>Client: </strong>{{work.client}}</p>
+    <p><strong>Date: </strong>{{work.dateCreation | date('d-m-y')}}</p>
+    <p><strong>Tags: </strong>
+      {% for tag in work.tags %}
+        <a href="{{path('app_tags_show', {'_locale': app.request.locale ,'id': tag.id, 'slug': attribute(tag, 'slug' ~ app.request.locale)})}}">{{attribute(tag, 'nom' ~ app.request.locale)}}</a>,
+      {% endfor %}
+    </p>
+    </div>
+    <!-- End Product Summary & Options -->
+
+  </div>
+</div>
+</div>
+<div class="section">
+  <div class="container">
+    <div class="row">
+    {{ render(controller('App\\Controller\\WorkController::similarAction',{'tags': work.tags, 'limit' : 4})) }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

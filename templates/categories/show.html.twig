@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block content1 %}
+<div class="section section-breadcrumbs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1> {{'categorie.detail' | trans}} {{attribute(categorie, 'nom' ~ app.request.locale)}}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      {{ render(controller('App\\Controller\\ArticleController::indexByCategorieAction',{'categorie': categorie.id})) }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

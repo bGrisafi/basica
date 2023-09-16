@@ -1,0 +1,5 @@
+<ul class="recent-posts">
+{% for article in articles %}
+    <li><a href="{{path('app_articles_show', {'_locale': app.request.locale ,'id': article.id, 'slug': attribute(article, 'slug' ~ app.request.locale)})}}">{{attribute(article, 'titre' ~ app.request.locale)}}</a></li>
+{% endfor %}
+</ul>

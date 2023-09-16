@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block content1 %}
+
+  {% if page.id == 1 %}
+    {% include 'pages/_main.html.twig' %}
+  {% elseif page.id == 2 %}
+    {% include 'pages/_common.html.twig'%}
+    {{ render(controller('App\\Controller\\WorkController::indexAction',{'vue': 'index', 'limit': 6})) }}
+  {% elseif page.id == 3 %}
+    {% include 'pages/_common.html.twig'%}
+    {{ render(controller('App\\Controller\\ArticleController::indexAction',{'vue': 'index', 'limit': 4})) }}
+  {% elseif page.id == 4 %}
+    {% include 'pages/_common.html.twig'%}
+    {% include 'pages/_contact.html.twig'%}
+  {% endif %}
+{% endblock %}
+
+{% block content2 %}
+  {% if page.id == 1 %}
+    {% include 'pages/_main_secondaire.html.twig' %}
+  {% endif %}
+{% endblock %}

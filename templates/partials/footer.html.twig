@@ -1,0 +1,40 @@
+<div class="footer">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-footer col-md-4 col-xs-6">
+        <h3>{{'contact.titre' | trans}}</h3>
+        <p class="contact-us-details">
+            <b>{{'contact.adresse' | trans}}:</b> 123 Downtown Avenue, Manhattan, New York, United States of America<br/>
+            <b>{{'contact.telephone' | trans}}:</b> +1 123 45678910<br/>
+            <b>{{'contact.fax' | trans}}:</b> +1 123 45678910<br/>
+            <b>{{'contact.email' | trans}}:</b> <a href="mailto:info@yourcompanydomain.com">info@yourcompanydomain.com</a>
+          </p>
+      </div>
+      <div class="col-footer col-md-4 col-xs-6">
+        <h3>{{'footer.social.titre' | trans}}</h3>
+        <p>{{'footer.social.texte' | trans}}</p>
+        <div>
+          <img src="{{asset('img/icons/facebook.png')}}" width="32" alt="Facebook">
+          <img src="{{asset('img/icons/twitter.png')}}" width="32" alt="Twitter">
+          <img src="{{asset('img/icons/linkedin.png')}}" width="32" alt="LinkedIn">
+        <img src="{{asset('img/icons/rss.png')}}" width="32" alt="RSS Feed">
+      </div>
+      </div>
+      <div class="col-footer col-md-4 col-xs-6">
+        <h3>{{'footer.a_propos.titre' | trans}}</h3>
+        <p>{{'footer.a_propos.texte' | trans}}</p>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="footer-copyright">
+          &copy; 2014 <a href="http://www.vactualart.com/portfolio-item/basica-a-free-html5-template/">Basica</a> {{'footer.template' | trans}} <a href="http://www.vactualart.com">Vactual Art</a>.
+        | <a href="{{path('easyadmin')}}">Administration</a>{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %} | <a href="{{path('fos_user_security_logout')}}">{{'logout' | trans}}</a>{% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

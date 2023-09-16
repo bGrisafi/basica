@@ -1,0 +1,5 @@
+<ul class="blog-categories">
+  {% for categorie in categories %}
+      <li><a href="{{path("app_categories_show", {id: categorie.id, slug: attribute(categorie, 'slug' ~ app.request.locale)})}}">{{attribute(categorie, 'nom' ~ app.request.locale)}}</a></li>
+  {% endfor %}
+</ul>

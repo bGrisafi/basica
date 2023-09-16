@@ -1,0 +1,18 @@
+<div class="col-sm-6 latest-news">
+  <h2>{{'rss.titre' | trans}}</h2>
+{% set iteration = 0 %}
+{% for item in rss if iteration < limit %}
+{% set titre = item.title %}
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="caption"><a href="full-width.html"> {{ item.title | raw  | slice(0,50) }} </a></div>
+        <div class="date">{{item.lastModified | date('d-m-y')}} | {{item.author.name}}</div>
+        <div class="intro"> {{ item.title | raw | slice(0,120) }} <a href="{{item.link}}">{{'article_liste.liste_secondaire.suite' | trans}}</a></div>
+      </div>
+    </div>
+    {% set iteration = iteration + 1 %}
+{% endfor %}
+<!-- Latest News FB -->
+  </div>
+</div>
+<!-- End Featured News -->

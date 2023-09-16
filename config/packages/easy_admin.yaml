@@ -1,0 +1,10 @@
+imports:
+    - { resource: admin/ }
+easy_admin:
+    site_name: '<i style="font-weight: 400;">Basica - Backend</i>'
+
+
+        # List the entity class name you want to manage
+#        - App\Entity\Article
+#        - App\Entity\Categorie
+#        - App\Entity\Tag

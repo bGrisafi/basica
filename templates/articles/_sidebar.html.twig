@@ -1,0 +1,10 @@
+<!-- Sidebar -->
+<div class="col-sm-4 blog-sidebar">
+
+  <h4>{{'article_liste.recent' | trans}}</h4>
+  {{ render(controller('App\\Controller\\ArticleController::indexAction',{'vue': '_recents', 'limit': 4})) }}
+
+  <h4>{{'categories' | trans}}</h4>
+  {{ render(controller('App\\Controller\\CategorieController::indexAction',{'vue': '_liste', 'limit': 10})) }}
+</div>
+<!-- End Sidebar -->

@@ -1,0 +1,42 @@
+<ol class="carousel-indicators">
+    {% set data_slide = 1 %}
+    <li data-target="#main-slider" data-slide-to="0"></li>
+    {% for work in works %}
+      {% if work.enVitrine == 1 %}
+        <li data-target="#main-slider" data-slide-to="{{data_slide}}"></li>
+        {% set data_slide = (data_slide +1) %}
+      {% endif %}
+    {% endfor %}
+</ol>
+<div class="carousel-inner">
+    <div class="item active" style="background-image: url({{asset('img/slides/1.jpg')}})">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="carousel-content centered">
+                        <h2 class="animation animated-item-1">{{'carousel.first.titre' | trans}}</h2>
+                        <p class="animation animated-item-2">{{'carousel.first.texte' | trans}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/.item-->
+    {% for work in works %}
+      {% if work.enVitrine == 1 %}
+        <div class="item" style="background-image: url({{asset('img/portfolio/' ~work.imageName)}})">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="carousel-content center centered">
+                            <h2 class="animation animated-item-1">{{attribute(work, 'titre' ~ app.request.locale)}}</h2>
+                            <p class="animation animated-item-2">{{attribute(work, 'texte' ~ app.request.locale) | slice(0,60) | striptags}}</p>
+                            <br>
+                            <a class="btn btn-md animation animated-item-3" href="{{path('app_works_show', {'_locale': app.request.locale ,'id': work.id, 'slug': attribute(work, 'slug' ~ app.request.locale)})}}">{{'carousel.bouton' | trans}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.item-->
+      {% endif %}
+    {% endfor %}
+</div><!--/.carousel-inner-->

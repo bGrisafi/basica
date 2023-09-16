@@ -1,0 +1,26 @@
+easy_admin:
+    entities:
+        work:
+            class: App\Entity\Work
+            form:
+                fields:
+                    - {property: 'titrefr', label: 'Titre Francais'}
+                    - {property: 'titreen', label: 'Title English'}
+                    - {property: 'enVitrine', label: 'Mettre en vitrine'}
+                    - {property: 'slugfr', label: 'Slug Francais'}
+                    - {property: 'slugen', label: 'Slug English'}
+                    - {property: 'textefr',label: 'Texte Francais', type: 'fos_ckeditor'}
+                    - {property: 'texteen',label: 'Text English', type: 'fos_ckeditor'}
+                    - {property: 'client', label: 'Client'}
+                    - {property: 'auteur', label: 'Auteur'}
+                    - {property: 'imageFile',label: 'Image', type: 'vich_image' }
+                    - {property: 'tags', label: 'Tags'}
+                    - {property: 'dateCreation', type_options: { disabled: true }}
+            list:
+                fields:
+                    - {property: 'titrefr', label: 'Titre Francais'}
+                    - {property: 'titreen', label: 'Title English'}
+                    - {property: 'enVitrine', label: 'Mettre en vitrine'}
+                    - {property: 'slugfr', label: 'Slug Francais'}
+                    - {property: 'slugen', label: 'Slug English'}
+                    - {property: 'dateCreation', label: 'Date de création'}

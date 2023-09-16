@@ -1,0 +1,64 @@
+portfolio_detail: Voir
+portfolio_suite: Afficher plus
+travaux_recents: Nos derniers travaux
+categories: Catégories
+works_similar: Produits similaires
+works_vide: Plus de projets à afficher
+facebook_twitter: Dernières actualités Facebook/Twitter
+login: Connexion
+logout: Se déconnecter
+bienvenue: Bienvenue
+
+pagination:
+    precedent: Précédent
+    suivant: Suivant
+
+work_detail:
+    titre: Détail du produit
+    vue_generale: Vue générale
+    details: Détails du projet
+
+article_liste:
+    suite: Suite
+    liste_secondaire:
+        derniers: Derniers articles de blog
+        suite: Suite...
+    recent: Articles récents
+
+categorie:
+    detail: Détail de la catégorie
+contact:
+    contact: Nous contacter
+    titre: Contact
+    adresse: Adresse
+    telephone: Téléphone
+    fax: Fax
+    email: Email
+
+footer:
+    social:
+        titre: Nos résaux sociaux
+        texte: >
+            (fr)Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+            sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+            magna aliquam.
+    a_propos:
+        titre: A propos
+        texte: >
+            (fr)Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+             sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+             magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+             quis nostrud exerci.
+    template: , un Template HTML Bootstrap . Par
+
+carousel:
+    first:
+        titre: Bienvenue sur BASICA! Un Templete Bootstrap3
+        texte: >
+            (fr)Sed mattis enim in nulla blandit tincidunt.
+            Phasellus vel sem convallis, mattis est id,
+            interdum augue. Integer luctus massa in arcu
+            euismod venenatis.
+    bouton: En savoir plus
+rss:
+    titre: Dernières news Facebook/twitter

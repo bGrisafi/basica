@@ -1,0 +1,13 @@
+# ./src/Routes/tags.yaml
+
+# Route d'affichage d'un tag: app_tags_show
+#   tags/{id}/{slug}
+#   > showAction de TagController
+#   id: '[1-9][0-9]*'
+#   slug: '[a-z][a-z0-9\-]*'
+show:
+    path: /{id}/{slug}
+    controller: App\Controller\TagController::showAction
+    requirements:
+        id:   '[1-9][0-9]*'
+        slug: '[a-z][a-z0-9\-]*'

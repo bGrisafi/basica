@@ -1,0 +1,14 @@
+{#
+  ./templates/pages/index.html.twig
+  vairables: pages(page(id,titre,texte,slug))
+#}
+
+<div class="collapse navbar-collapse" id="navbarResponsive">
+  <ul class="nav navbar-nav navbar-right">
+    {% for page in pages %}
+  <li {% if currentId == page.id and (app.request.attributes.get('currentRoute') == "app_pages_show" or app.request.attributes.get('currentRoute') == "app_homepage") %}class="active"{% endif %}>
+    <a href="{{path("app_pages_show", {id: page.id, slug: attribute(page, 'slug' ~ app.request.locale)})}}">{{attribute(page, 'slug' ~ app.request.locale) | capitalize}}</a>
+      </li>
+    {% endfor %}
+    </ul>
+</div>

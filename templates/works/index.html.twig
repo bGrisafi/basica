@@ -1,0 +1,10 @@
+<div class="section">
+  <div class="container">
+    <div class="row" id="more-ajax">
+      {% include 'works/_liste.html.twig' %}
+    </div>
+    <ul class="pager">
+      <li><a href="#" data-limit="6" data-offset="6" data-url="{{ path('app_works_more') }}" id="more-works">{{'portfolio_suite' | trans}}</a></li>
+    </ul>
+  </div>
+</div>

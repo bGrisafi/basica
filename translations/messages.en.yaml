@@ -1,0 +1,64 @@
+portfolio_detail: Take a look
+portfolio_suite: More works
+travaux_recents: Our recent works
+categories: Categories
+works_similar: Similar Works
+works_vide: No more works to show
+facebook_twitter: Latest Facebook/Twitter news
+login: Login
+logout: Logout
+bienvenue: Welcome
+
+pagination:
+    precedent: Previous
+    suivant: Next
+
+work_detail:
+    titre: Product Details
+    vue_generale: Quick overview
+    details: Project details
+
+article_liste:
+    suite: Read more
+    liste_secondaire:
+        derniers: Latest Blog Posts
+        suite: Read more...
+    recent: Recent Posts
+categorie:
+    detail: Category detail:
+contact:
+    contact: Get in Touch with Us
+    titre: Contact Us
+    adresse: Address
+    telephone: Phone
+    fax: Fax
+    email: Email
+
+footer:
+    social:
+        titre: Our Social Networks
+        texte: >
+            (en)Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+            sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+            magna aliquam.
+    a_propos:
+        titre: About Our Company
+        texte: >
+            (en)Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+             sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+             magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+             quis nostrud exerci.
+    template: Bootstrap HTML Template. By
+
+carousel:
+    first:
+        titre: Welcome to BASICA! A Bootstrap3 Template
+        texte: >
+            (en)Sed mattis enim in nulla blandit tincidunt.
+            Phasellus vel sem convallis, mattis est id,
+            interdum augue. Integer luctus massa in arcu
+            euismod venenatis.
+    bouton: Learn More
+
+rss:
+    titre: Lastest FaceBook/Twitter News

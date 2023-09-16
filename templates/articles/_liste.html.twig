@@ -1,0 +1,24 @@
+{% for article in articles %}
+  <div class="col-sm-{{col_sm_value}}">
+    <div class="blog-post blog-single-post">
+      <div class="single-post-title">
+        <h2>{{attribute(article, 'titre' ~ app.request.locale)}}</h2>
+      </div>
+
+      <div class="single-post-image">
+        <img src="{{asset('img/blog/' ~article.imageName)}}" alt="{{article.imageName}}">
+      </div>
+
+      <div class="single-post-info">
+        <i class="glyphicon glyphicon-time"></i> {{ article.dateCreation | date('d-m-y') }}
+      </div>
+
+      <div class="single-post-content">
+        <p>
+          {{attribute(article, 'texte' ~ app.request.locale) | slice(0,60) | raw}}
+        </p>
+      <a href="{{path('app_articles_show', {'_locale': app.request.locale ,'id': article.id, 'slug': attribute(article, 'slug' ~ app.request.locale)})}}" class="btn">{{'article_liste.suite' | trans}}</a>
+      </div>
+    </div>
+  </div>
+{% endfor %}
